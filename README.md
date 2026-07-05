@@ -11,9 +11,21 @@ Given raw physiological signals from wearable sensors, the goal is to build a pi
 
 ## Dataset
 
-This project uses the **[WESAD (Wearable Stress and Affect Detection) dataset](https://archive.ics.uci.edu/dataset/465/wesad+wearable+stress+and+affect+detection)**.
+This project uses the **[WESAD (Wearable Stress and Affect Detection) dataset](https://www.kaggle.com/datasets/orvile/wesad-wearable-stress-affect-detection-dataset)** (Kaggle mirror).
 
-> **Note:** The raw dataset is not included in this repo (multi-GB, publicly available). Download it from the link above and update the `RAW_EXTRACT` / `EXTRACT_PATH` variables in the notebook to point to your local copy.
+> **Note:** The raw dataset is not included in this repo (multi-GB, publicly available). Download it via one of the methods below and update the `RAW_EXTRACT` / `EXTRACT_PATH` variables in the notebook to point to your local copy.
+
+**Option A — Kaggle CLI / kagglehub:**
+```python
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("orvile/wesad-wearable-stress-affect-detection-dataset")
+print("Path to dataset files:", path)
+```
+
+**Option B — Manual download:**
+Download directly from the [Kaggle dataset page](https://www.kaggle.com/datasets/orvile/wesad-wearable-stress-affect-detection-dataset) and extract locally.
 
 ## Approach
 
